@@ -1,5 +1,16 @@
-function addGreeting (a) {
-    a.innerHTML = "Welcome to WebStorm";
+
+
+export default class HelloWorld {
+
+    constructor() {
+        this.message = "Hello World!";
+
+        }
+    addGreeting (aElement)  {
+        aElement.innerHTML = this.message;
+    };
+
 }
 
-module.exports = addGreeting;
+
+module.exports = HelloWorld;

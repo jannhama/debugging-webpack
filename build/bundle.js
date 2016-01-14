@@ -44,25 +44,61 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var greeting = __webpack_require__(1);
+	"use strict";
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _greetingJs = __webpack_require__(1);
+	
+	var _greetingJs2 = _interopRequireDefault(_greetingJs);
 	
 	(function () {
+	
+	    console.log("started!");
+	    var hw = new _greetingJs2["default"]();
 	    var welcomeBtn = document.getElementById("welcomeBtn");
 	    var welcomeMsg = document.getElementById("welcomeMsg");
 	
-	    welcomeBtn.addEventListener('click',  function(){ greeting(welcomeMsg)});
+	    welcomeBtn.addEventListener('click', function () {
+	        hw.addGreeting(welcomeMsg);
+	    });
 	})();
-
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	function addGreeting (a) {
-	    a.innerHTML = "Welcome to WebStorm";
-	}
+	"use strict";
 	
-	module.exports = addGreeting;
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var HelloWorld = (function () {
+	    function HelloWorld() {
+	        _classCallCheck(this, HelloWorld);
+	
+	        this.message = "Hello World!";
+	    }
+	
+	    _createClass(HelloWorld, [{
+	        key: "addGreeting",
+	        value: function addGreeting(aElement) {
+	            aElement.innerHTML = this.message;
+	        }
+	    }]);
+	
+	    return HelloWorld;
+	})();
+	
+	exports["default"] = HelloWorld;
+	
+	module.exports = HelloWorld;
+	module.exports = exports["default"];
 
 /***/ }
 /******/ ]);
