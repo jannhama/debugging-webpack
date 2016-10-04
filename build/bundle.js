@@ -46,16 +46,16 @@
 
 	"use strict";
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	var _greeting = __webpack_require__(1);
 	
-	var _greetingJs = __webpack_require__(1);
+	var _greeting2 = _interopRequireDefault(_greeting);
 	
-	var _greetingJs2 = _interopRequireDefault(_greetingJs);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(function () {
 	
 	    console.log("started!");
-	    var hw = new _greetingJs2["default"]();
+	    var hw = new _greeting2.default();
 	    var welcomeBtn = document.getElementById("welcomeBtn");
 	    var welcomeMsg = document.getElementById("welcomeMsg");
 	
@@ -74,11 +74,11 @@
 	    value: true
 	});
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var HelloWorld = (function () {
+	var HelloWorld = function () {
 	    function HelloWorld() {
 	        _classCallCheck(this, HelloWorld);
 	
@@ -93,12 +93,12 @@
 	    }]);
 	
 	    return HelloWorld;
-	})();
+	}();
 	
-	exports["default"] = HelloWorld;
+	exports.default = HelloWorld;
+	
 	
 	module.exports = HelloWorld;
-	module.exports = exports["default"];
 
 /***/ }
 /******/ ]);
